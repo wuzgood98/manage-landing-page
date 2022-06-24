@@ -93,7 +93,8 @@ class Gallery {
 
   previousTestimonial() {
     const selected = document.querySelector(".selected");
-    const prev = selected.nextElementSibling || this.carousel.firstElementChild;
+    const prev =
+      selected.previousElementSibling || this.carousel.lastElementChild;
     selected.classList.remove("selected");
     prev.classList.add("selected");
     this.setIndicator(prev);
